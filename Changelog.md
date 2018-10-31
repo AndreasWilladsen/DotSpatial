@@ -31,6 +31,7 @@ Be aware that code written for 1.9 will not work out of the box because DotSpati
 
 ### Changed
 - Switched to VS2015 and C#6
+- Switched to .Net Framework 4.5.2 (#1083)
 - GdalExtension: Updated to GDAL 1.1.11
 - Demo and Apps projects should have build files (#120)
 - ExtensionManager & HideReleaseFromEndUser (#798)
@@ -54,6 +55,8 @@ Be aware that code written for 1.9 will not work out of the box because DotSpati
 - If a dxf file contains only a single feature type the dxf file gets added to the map as a single layer with the feature type it contains (#1061)
 - dxf files get loaded with their styles (#1061)
 - Show buttons from layout toolbars as checked while their function is active
+- replaced ContextMenu by ContextMenuStrip inside Legend, so we don't have to draw the images shown in the ContextMenu ourselves (#1069)
+- changed the background color of the LayerDialog and TabControlDialog tabs to Control so they have the same background color as the user controls they contain (#1069)
 
 ### Removed
 - Removed DotSpatial.Topology assembly (#633)
@@ -137,3 +140,10 @@ Be aware that code written for 1.9 will not work out of the box because DotSpati
 - The SpatiaLite plugin to be able to load SpatiaLite databases of version 4 and higher (#1061)
 - WebMap-Plugin fails fetching tiles for specific WMS (#1074)
 - Plugins/WFSClient: Feature fetching fails on systems w NumberFormatInfo.NumberDecimalSeparator != '.' (#1081)
+- showMargin can be checked as soon as layoutControl is not null (#1091) 
+- don't assign the 'EndRow' property to itself in BinaryRaster.OpenWindow (#1089)
+- assign "D_ITRF_1997" to ITRF1997.GeographicInfo.Datum.Name instead of ITRF1997.GeographicInfo.Name because this is the name of the datum and not the GeographicInfo (#1090)
+- Update Brutile version in Webmap? (#800)
+- SetSelectable Plugin Not Included in Release Build (#1106)
+- Error on OpenFile with special SPHEROID string (#1142)
+- Shape File Saves with Wrong DataTypes (#1005)
