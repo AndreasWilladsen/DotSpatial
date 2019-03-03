@@ -136,8 +136,7 @@ namespace DotSpatial.Projections.Tests.Geographic
         }
 
 
-        [Test, Ignore]  
-        // to be removed eventually, replaced with Amersfoort, DutchRD is to be found in ProjectedCategories.Nationalgrids as it is a Projected coordinate system
+        [Test, Ignore("to be removed eventually, replaced with Amersfoort, DutchRD is to be found in ProjectedCategories.Nationalgrids as it is a Projected coordinate system")]  
         public void DutchRD()
         {
             ProjectionInfo pStart = KnownCoordinateSystems.Geographic.Europe.DutchRD;
